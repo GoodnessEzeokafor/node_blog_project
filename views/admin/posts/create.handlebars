@@ -1,0 +1,33 @@
+<h1>Create Posts</h1> 
+<div class="col-md-7">
+<form action="/admin/posts/create" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="title">Post Title</label>
+        <input name="title" type="text" class="form-control" placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+        <label for="status">Status</label>
+        <select name="status" id="status" class="form-control">
+            <option value="draft">Draft</option>
+            <option value="public">Public</option>
+            <option value="private">Private</option>   
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="file">Image</label>
+        <input name="file" type="file" placeholder="Enter Title">
+    </div>
+
+    <div class="form-group">
+        <label for="body">Body</label>
+        <textarea name="body" id="" cols="30" rows="10" class="form-control" placeholder="Enter Text"></textarea>
+    </div>
+        
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input mb-4" type="checkbox" name="allowComments">Allow Comments
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2 mb-2">Submit</button>
+</form>
+</div>
